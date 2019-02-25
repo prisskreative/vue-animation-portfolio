@@ -1,0 +1,55 @@
+<template>
+  <main>
+
+    <div class="about">
+      <h1>About Me</h1>
+
+    </div>
+
+  </main>
+</template>
+
+<script>
+import { mapState } from 'vuex'
+import IconBase from '~/components/IconBase.vue'
+import AppStarRating from '~/components/AppStarRating.vue'
+
+export default {
+  components: {
+    IconBase,
+    AppStarRating
+  },
+  computed: mapState(['page', 'users', 'places'])
+}
+</script>
+
+<style lang="scss" scoped>
+h1 {
+  font-size: 45px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.location img {
+  width: 70px;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+p,
+.stars {
+  margin: 10px 0;
+}
+
+.main-img {
+  background: url('/header1.jpg') center center;
+  background-size: cover;
+  width: 100%;
+  height: 240px;
+}
+
+.top {
+  margin: 30px 0 0;
+}
+</style>
