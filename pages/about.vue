@@ -1,11 +1,10 @@
 <template>
   <main>
-
-    <div class="about">
-      <h1>About Me</h1>
-
+    <div class="container">
+      <div class="about">
+        <h1 class="title">About Me</h1>
+      </div>
     </div>
-
   </main>
 </template>
 
@@ -24,24 +23,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  font-size: 45px;
-  margin-top: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+.about{
+  position: relative;
+  height: 100%;
 }
-
-.location img {
-  width: 70px;
-  float: left;
-  margin: 0 10px 10px 0;
-}
-
-p,
-.stars {
-  margin: 10px 0;
-}
-
 .main-img {
   background: url('/header1.jpg') center center;
   background-size: cover;
@@ -49,7 +34,13 @@ p,
   height: 240px;
 }
 
-.top {
-  margin: 30px 0 0;
+.profile-photo-secondary {
+  position: absolute;
+  top: 270px;
+  left: 33%;
+  display: block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: 0.4s all ease-out;
 }
 </style>

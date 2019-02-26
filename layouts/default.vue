@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <app-navigation />
     <nuxt/>
     <app-footer />
@@ -23,10 +23,12 @@ export default {
 /* common styles shared through the application */
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,900');
-
+html{
+  background-color: #FEF7F8;
+}
 body {
-  background: white;
-  color: #333;
+  background-color: #FEF7F8;
+  color: #383147;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
@@ -36,8 +38,7 @@ body {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   line-height: 1.2;
-  /* background-color: rgb(28, 28, 28); */
-  background-color: #fafafa;
+  position: relative;
 }
 
 *,
@@ -68,22 +69,32 @@ button {
 }
 
 h1{
-  font-family: 'Poppins', sans-serif; 
-  font-weight: 900;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 2.6rem;
+  font-weight: bold;
 }
 
-h2,
+h2{
+  font-family: 'Lora', serif;
+  font-style: italic;
+}
 h3,
 h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
-main {
-  max-width: 1000px;
+main{
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  width: 94%;
+}
+
+.title {
+    text-align: center;
+    color: #383147;
+    margin-top: 5%;
+    font-size: 45px;
 }
 
 .top {

@@ -1,6 +1,15 @@
 <template>
   <main>
-   
+    <div class="container">
+      <div class="row content">
+        <div class="col-6">
+          <h1>HELLO,<br> I AM PRISCILLA,</h1>
+          <h2>I am UI/UX Designer & Developer</h2>
+          <p>I love to create beautiful web interfaces and make them come to life with the magic of code</p>
+          <button type="button" class="btn btn-dark-pink">Resume</button>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -26,36 +35,25 @@ export default {
 main {
   padding-top: 20px;
   margin-top: 120px;
-  background-color: #fafafa;
+}
+.content{
+  margin-top: 9%;
+  margin-left: 1%;
+}
+.btn-medium-pink{
+  background-color: #F397AF;
+}
+.btn-dark-pink{
+  background-color: #F3779B;
 }
 
-.places {
-  img {
-    float: left;
-    margin: 0 15px 15px 0;
-  }
-  p {
-    margin-top: 10px;
-  }
-  .location {
-    padding: 10px 0;
-  }
+h2{
+  font-size: 1.5rem;
+  padding-bottom: 15px;
 }
-
-/* hr {
-  border-top: 1px solid #ddd;
-  border-bottom: none;
-  margin-top: 15px;
+p{
+  line-height: 1.5rem;
 }
-
-.mapcontain {
-  width: 35%;
-  float: right;
-  height: 400px;
-  p {
-    margin: 10px 0;
-  }
-} */
 
 @media screen and (max-width: 600px) {
   /* .mapcontain {

@@ -11,10 +11,11 @@
       <div key="img2" v-else-if="page === 'place'" class="header-img2"></div>
       <div key="img3" v-else class="header-img3"></div>
     </transition-group> -->
-
+<div class="nav-logo">Logo</div>
     <div class="nav-wrapper">
+      
       <nav>
-        <ul>
+        <ul>   
           <nuxt-link exact to="/"><li>Home</li></nuxt-link>
           <nuxt-link to="/about"><li>About</li></nuxt-link>
           <nuxt-link to="/work"><li>Work</li></nuxt-link>
@@ -119,6 +120,7 @@ header {
   width: 100vw;
   height: 50px;
   position: relative;
+  background: #FEF7F8;
   &:before {
     content: '';
     z-index: 10;
@@ -127,31 +129,6 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background: -moz-radial-gradient(
-      center,
-      ellipse cover,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 36%,
-      rgba(0, 0, 0, 0.65) 100%
-    ); /* FF3.6-15 */
-    background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 36%,
-      rgba(0, 0, 0, 0.65) 100%
-    ); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 36%,
-      rgba(0, 0, 0, 0.65) 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(
-        startColorstr='#00000000',
-        endColorstr='#a6000000',
-        GradientType=1
-      ); /* IE6-9 fallback on horizontal gradient */
     opacity: 0.6;
   }
   &:after {
@@ -164,6 +141,9 @@ header {
     left: 0;
     background: #000;
   }
+  a{
+    color: #383147;
+  }
 }
 
 @mixin header ($imgurl) {
@@ -172,18 +152,6 @@ header {
   position: absolute;
   width: 100vw;
   height: 300px;
-}
-
-.header-img1 {
-  @include header('/header1.jpg');
-}
-
-.header-img2 {
-  @include header('/header2.jpg');
-}
-
-.header-img3 {
-  @include header('/header3.jpg');
 }
 
 .bk-enter-active,
@@ -205,6 +173,11 @@ header {
   top: 0;
 }
 
+.nav-logo{
+    background: #FEF7F8;
+    padding: 20px 0 0 30px;
+}
+
 .nav-wrapper {
   width: 100vw;
   position: relative;
@@ -212,6 +185,7 @@ header {
   background: rgba(4, 67, 98, 0.25);
   ul {
     float:right;
+    margin-top: -30px;
   }
 }
 

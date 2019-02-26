@@ -7,8 +7,8 @@ const createStore = () => {
       indexedUser: 0,
       users: [
         {
-          name: 'Name',
-          img: '/profile2.jpg',
+          name: '',
+          img: '/profile7.jpeg',
           location: 'San Francisco',
           bio:
             'Had a brief careerwith jack-in-the-boxes in Phoenix, AZ. Spent several months managing squirt guns and implementing toy elephants.',

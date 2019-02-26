@@ -6,7 +6,6 @@
       :class="[user === selectedUser ? activeUser : secondaryUser, `profile-${i}`]"
       :ref="`profile${i}`"
     > 
-      <div class="online"></div>
       <img :src="user.img" />
     </div>
 
@@ -56,9 +55,6 @@ export default {
   },
   data() {
     return {
-    /*   following: false,
-      follow: 'follow',
-      followclass: 'active-follow', */
       activeUser: 'profile-photo',
       secondaryUser: 'profile-photo-secondary'
     }
@@ -235,8 +231,8 @@ aside p {
 }
 
 .profile-photo {
-  width: 200px;
-  @include group(150px, 40%);
+  width: 400px;
+  @include group(170px, 55%);
   img {
     border-radius: 50%;
   }
@@ -246,7 +242,7 @@ aside p {
 }
 
 .profile-photo-secondary {
-  @include group(150px, 0);
+  @include group(270px, 33%);
   width: 200px;
   opacity: 0;
   transition: none;
@@ -267,26 +263,6 @@ aside p {
   }
 }
 
-.profile-1 {
-  transform: translate3d(-15px, -70px, 0) scale(0.25);
-}
-.profile-2 {
-  transform: translate3d(40px, -70px, 0) scale(0.25);
-}
-.profile-3 {
-  transform: translate3d(95px, -70px, 0) scale(0.25);
-}
-
-/* .follow {
-  font-weight: bold;
-  width: 150px;
-  transition: 1s all ease;
-  @include group(320px, 220px);
-  &:focus {
-    outline: 1px dotted rgb(5, 134, 106);
-  }
-} */
-
 .saveinfo {
   color: white;
   position: absolute;
@@ -298,38 +274,21 @@ aside p {
   opacity: 0;
 }
 
-.active-follow {
-  background: rgb(5, 134, 106);
-}
-
 .profile-name {
   font-size: 35px;
   @include group(355px, 0);
 }
 
-.side-icon {
-  position: absolute;
-  top: 220px;
-  right: 0;
-  display: block;
-  transition: 0.4s all ease-out;
-  padding: 12px 12px 9px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50% 50%;
-  cursor: pointer;
-}
-
 //animations
 .about, .contact {
-  .follow {
-    transform: translate3d(-215px, -80px, 0);
-  }
   .profile-photo {
     transform: translate3d(-20px, -100px, 0) scale(0.75);
+    @include group(250px, 35%);
+    width: 300px;
   }
   .profile-name {
     transform: translate3d(140px, -125px, 0) scale(0.75);
-    color: white;
+    color: #000;
   }
   .side-icon {
     transform: translate3d(0, -40px, 0);
@@ -346,17 +305,9 @@ aside p {
     transition: none;
   }
   .profile-photo {
-    transform: translate3d(-70px, -70px, 0) scale(0.25);
     img {
-      border-radius: 50% 50%;
+      display: none;
     }
-  }
-  .profile-0,
-  .profile-1,
-  .profile-2,
-  .profile-3 {
-    transition: 0.4s all ease-in-out;
-    opacity: 1;
   }
   .profile-photo,
   .profile-photo-secondary {
@@ -365,19 +316,9 @@ aside p {
       border: 10px solid white;
     }
   }
-  .online {
-    opacity: 1;
-  }
   .profile-name {
     transform: translate3d(0px, -125px, 0);
     color: white;
-  }
-  .side-icon {
-    transform: translate3d(0, -40px, 0);
-    background: rgba(255, 255, 255, 0.9);
-  }
-  .map-pin {
-    opacity: 1;
   }
 }
 

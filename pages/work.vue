@@ -1,13 +1,31 @@
 <template>
   <main>
-
     <div class="work">
-    <!--   <div v-for="place in places" class="location" :key="place.name">
-        <img :src="place.img" :alt="place.name" />
-        <p class="top"><strong>{{ place.name }}</strong></p>
-        <p>{{ place.description }}</p>
-        <hr />
-      </div> -->
+      <h1 class="title">My Work</h1>
+      <div class="row content">
+        <div
+          v-for="(image, index) in images"
+          :key="image.id"
+          @click="activeIndex = index"
+          class="col-4">
+            <figure class="work-image">
+              <img :src="image" :alt="image">
+            </figure>
+        </div>
+      </div>
+      <div
+        v-for="(image, index) in images"
+        class="modal"
+        :key="image.id"
+        :class="{ 'is-active': activeIndex == index }">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <figure class="image is-4by3">
+            <img :src="image" alt="">
+          </figure>
+        </div>
+        <button @click="activeIndex = null" class="modal-close is-large"></button>
+      </div>
     </div>
 
   </main>
@@ -19,6 +37,22 @@ import IconBase from '~/components/IconBase.vue'
 import AppStarRating from '~/components/AppStarRating.vue'
 
 export default {
+  data () {
+    return{
+      activeIndex: null,
+      images: [
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400',
+        'https://via.placeholder.com/500x400'
+      ]
+    }
+  },
   components: {
     IconBase,
     AppStarRating
@@ -28,20 +62,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  font-size: 45px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+.work{
+  position: relative;
+  min-height: 100%;
 }
-
-.main-img {
-  background: url('/header1.jpg') center center;
-  background-size: cover;
-  width: 100%;
-  height: 240px;
+.work-image{
+  margin: 15px 0;
 }
-
-.top {
-  margin: 30px 0 0;
+img:hover {
+  cursor: pointer;
 }
 </style>

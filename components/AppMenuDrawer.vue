@@ -79,7 +79,6 @@ export default {
 
 <style scoped>
 .menudrawer {
-  background: rgba(0, 0, 0, 0.8);
   line-height: 1.8;
   text-align: right;
   position: absolute;
