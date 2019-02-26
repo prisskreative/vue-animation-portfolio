@@ -3,10 +3,10 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _aecd87fe = () => import('..\\pages\\work.vue' /* webpackChunkName: "pages_work" */).then(m => m.default || m)
-const _1d5504e0 = () => import('..\\pages\\contact.vue' /* webpackChunkName: "pages_contact" */).then(m => m.default || m)
-const _47562066 = () => import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */).then(m => m.default || m)
-const _07e66adc = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
+const _a19ee8da = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _b08e71b4 = () => import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */).then(m => m.default || m)
+const _75980f7b = () => import('../pages/work.vue' /* webpackChunkName: "pages/work" */).then(m => m.default || m)
+const _622f3350 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -67,23 +67,23 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/work",
-			component: _aecd87fe,
-			name: "work"
-		},
-		{
-			path: "/contact",
-			component: _1d5504e0,
-			name: "contact"
-		},
-		{
 			path: "/about",
-			component: _47562066,
+			component: _a19ee8da,
 			name: "about"
 		},
 		{
+			path: "/contact",
+			component: _b08e71b4,
+			name: "contact"
+		},
+		{
+			path: "/work",
+			component: _75980f7b,
+			name: "work"
+		},
+		{
 			path: "/",
-			component: _07e66adc,
+			component: _622f3350,
 			name: "index"
 		}
     ],
