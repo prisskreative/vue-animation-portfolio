@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "deep-extend": "^0.5.1",
     "gsap": "^1.20.4",
     "hoek": "^5.0.4",
     "mapbox-gl": "^0.44.1",
