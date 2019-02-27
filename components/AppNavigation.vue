@@ -182,10 +182,10 @@ header {
   width: 100vw;
   position: relative;
   z-index: 1000;
-  background: rgba(4, 67, 98, 0.25);
   ul {
     float:right;
     margin-top: -30px;
+    margin-right: -150px;
   }
 }
 

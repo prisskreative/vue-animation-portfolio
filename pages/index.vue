@@ -3,10 +3,17 @@
     <div class="container">
       <div class="row content">
         <div class="col-6">
-          <h1>HELLO,<br> I AM PRISCILLA,</h1>
+          <h1>HELLO,<br> I AM PRISCILLA</h1>
           <h2>I am UI/UX Designer & Developer</h2>
-          <p>I love to create beautiful web interfaces and make them come to life with the magic of code</p>
-          <button type="button" class="btn btn-dark-pink">Resume</button>
+          <p>I love to create beautiful web interfaces and <br>make them come to life with the magic of code</p>
+            <div class="row">
+              <div class="col-3">  
+                <button type="button" class="btn darkPink"><nuxt-link to="/about">ABOUT ME</nuxt-link></button>
+              </div>
+              <div class="col-3">  
+                <button type="button" class="btn btn-darkPink">SEE MY RESUME</button>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -29,27 +36,45 @@ export default {
 .mapboxgl-missing-css {
   display: none;
 }
+.theme--light.v-footer {
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    padding-left: 47%;
+}
 </style>
 
 <style lang="scss" scoped>
+a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 3.3rem;
+}
 main {
   padding-top: 20px;
   margin-top: 120px;
+  height: 100%;
 }
+
 .content{
-  margin-top: 9%;
+  margin-top: 6%;
   margin-left: 1%;
+  h1{
+    color: #504766;
+  }
 }
-.btn-medium-pink{
-  background-color: #F397AF;
+.btn{
+  width: 130px;
 }
-.btn-dark-pink{
-  background-color: #F3779B;
-}
+
 
 h2{
   font-size: 1.5rem;
-  padding-bottom: 15px;
 }
 p{
   line-height: 1.5rem;

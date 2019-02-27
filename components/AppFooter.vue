@@ -1,53 +1,50 @@
 <template>
   <v-footer
-    dark
     height="auto"
   >
     <v-card
-      class="flex"
+      class="lightPink flex"
       flat
-      tile
-    >
-      <v-card-title class="teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
-        
-        <v-card>
+      >
+ 
+        <div class="lightPink text-md-center">
           <font-awesome-icon :icon="['fab', 'linkedin']" class="icon alt"/>
           <font-awesome-icon :icon="['fab', 'twitter']" class="icon alt" />
           <font-awesome-icon :icon="['fab', 'github']" class="icon alt" />
-        </v-card>
+        </div>
         <v-spacer></v-spacer>
 
         
-      </v-card-title>
 
-      <v-card-actions class="grey darken-3 justify-center">
-        &copy;2018 — <strong>Vuetify</strong>
-      </v-card-actions>
+
+      <div class="copyrights lightPink text-md-center">
+        &copy;2019 — Prisskreative
+      </div>
     </v-card>
   </v-footer>
 </template>
 
-<style scoped>
-footer {
+<style>
+v-footer {
   padding: 10px;
   color: #383147;
-  text-align: center;
   letter-spacing: 0.03em;
   font-size: 10px;
-  position: relative;
-  margin-top: -30px;
-  /* negative value of footer height */
-  height: 30px;
   clear: both;
+  position: relative;
   bottom: 0;
 }
 
-a,
-a:visited,
-a:active {
+.theme--light.v-footer {
+    background: transparent;
+}
+
+.copyrights{
+  font-size: 10px;
+}
+
+.icon {
   color: #383147;
-  text-decoration: none;
-  padding-left: 6px;
+  margin-right: 10px;
 }
 </style>

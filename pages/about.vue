@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <div class="about">
-        <h1 class="title">About Me</h1>
+        <h1>About Me</h1>
       </div>
     </div>
   </main>
@@ -22,11 +22,25 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.about{
-  position: relative;
-  height: 100%;
+<style>
+.theme--light.v-footer {
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    padding-left: 47%;
 }
+</style>
+
+<style lang="scss" scoped>
+.container{
+  text-align: center; 
+}
+
+h1{
+    font-size: 45px;
+    margin-top: 3%;
+} 
+ 
 .main-img {
   background: url('/header1.jpg') center center;
   background-size: cover;

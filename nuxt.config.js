@@ -24,7 +24,11 @@ module.exports = {
       }
     ]
   },
-  plugins: ['~plugins/vuetify.js'],
+  plugins:  [
+            '~plugins/vuetify.js', 
+            '~plugins/font-awesome.js',
+            '~plugins/vuelidate.js'
+            ],
   css: ['~assets/app.styl'],
   router: {
     middleware: 'pages'

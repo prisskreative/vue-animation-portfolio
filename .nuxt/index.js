@@ -13,6 +13,8 @@ import { createStore } from './store.js'
 
 /* Plugins */
 import nuxt_plugin_vuetify_512965c0 from 'nuxt_plugin_vuetify_512965c0' // Source: ../plugins/vuetify.js
+import nuxt_plugin_fontawesome_7484123b from 'nuxt_plugin_fontawesome_7484123b' // Source: ../plugins/font-awesome.js
+import nuxt_plugin_vuelidate_7b59e9fd from 'nuxt_plugin_vuelidate_7b59e9fd' // Source: ../plugins/vuelidate.js
 
 
 // Component: <no-ssr>
@@ -152,6 +154,8 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   if (typeof nuxt_plugin_vuetify_512965c0 === 'function') await nuxt_plugin_vuetify_512965c0(app.context, inject)
+  if (typeof nuxt_plugin_fontawesome_7484123b === 'function') await nuxt_plugin_fontawesome_7484123b(app.context, inject)
+  if (typeof nuxt_plugin_vuelidate_7b59e9fd === 'function') await nuxt_plugin_vuelidate_7b59e9fd(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

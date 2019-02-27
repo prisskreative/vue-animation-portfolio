@@ -1,30 +1,32 @@
 <template>
   <main>
-    <div class="work">
-      <h1 class="title">My Work</h1>
-      <div class="row content">
+    <div class="container">
+      <div class="work">
+        <h1>My Work</h1>
+        <div class="row content">
+          <div
+            v-for="(image, index) in images"
+            :key="image.id"
+            @click="activeIndex = index"
+            class="col-4">
+              <figure class="work-image">
+                <img :src="image" :alt="image">
+              </figure>
+          </div>
+        </div>
         <div
           v-for="(image, index) in images"
+          class="modal"
           :key="image.id"
-          @click="activeIndex = index"
-          class="col-4">
-            <figure class="work-image">
-              <img :src="image" :alt="image">
+          :class="{ 'is-active': activeIndex == index }">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <figure class="image is-4by3">
+              <img :src="image" alt="">
             </figure>
+          </div>
+          <button @click="activeIndex = null" class="modal-close is-large"></button>
         </div>
-      </div>
-      <div
-        v-for="(image, index) in images"
-        class="modal"
-        :key="image.id"
-        :class="{ 'is-active': activeIndex == index }">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <figure class="image is-4by3">
-            <img :src="image" alt="">
-          </figure>
-        </div>
-        <button @click="activeIndex = null" class="modal-close is-large"></button>
       </div>
     </div>
 
@@ -62,6 +64,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1{
+  font-size: 45px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
 .work{
   position: relative;
   min-height: 100%;

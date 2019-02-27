@@ -25,6 +25,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,900');
 html{
   background-color: #FEF7F8;
+  height: 100%
 }
 body {
   background-color: #FEF7F8;
@@ -39,6 +40,25 @@ body {
   box-sizing: border-box;
   line-height: 1.2;
   position: relative;
+  height: 100vh;
+}
+
+.lightPink{
+  background-color: #FEF7F8;
+}
+.mediumPink{
+  background-color: #F397AF;
+}
+.darkPink{
+  background-color: #F3779B;
+}
+.darkPink-btn{
+  background: transparent;
+  color: #F3779B;
+  border-color: #F3779B; 
+}
+.myPurple{
+  color: #504766;
 }
 
 *,
@@ -71,8 +91,10 @@ button {
 h1{
   font-family: 'Lora', serif;
   font-style: italic;
-  font-size: 2.6rem;
+  font-size: 45px;
   font-weight: bold;
+  margin-top: 3%;
+  color: #504766;
 }
 
 h2{
@@ -88,13 +110,7 @@ h4 {
 main{
   margin: 0 auto;
   width: 94%;
-}
-
-.title {
-    text-align: center;
-    color: #383147;
-    margin-top: 5%;
-    font-size: 45px;
+  height: 100%;
 }
 
 .top {

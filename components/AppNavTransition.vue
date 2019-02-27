@@ -322,6 +322,24 @@ aside p {
   }
 }
 
+//animations
+.contact {
+  .profile-photo {
+   display: none;
+  }
+  .profile-name {
+    transform: translate3d(140px, -125px, 0) scale(0.75);
+    color: #000;
+  }
+  .side-icon {
+    transform: translate3d(0, -40px, 0);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .calendar {
+    opacity: 1;
+  }
+}
+
 .index {
   .profile-photo {
     transform: translate3d(0, 0, 0) scale(1);
