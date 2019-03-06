@@ -185,7 +185,6 @@ header {
   ul {
     float:right;
     margin-top: -30px;
-    margin-right: -150px;
   }
 }
 
